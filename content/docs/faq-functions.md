@@ -106,7 +106,7 @@ method();
 
 바인딩 메소드는 두 번째 코드 조각이 첫 번째 코드조각과 같은 방식으로 작동하도록 만들어 줍니다.
 
-일반적으로 리액트에서 다른 컴포넌트에 메소드를 **전달**해 줄 때만 바인딩해 주면 됩니다. 예를 들어 `<button onClick={this.handleClick}>`는 `this.handleClick`을 전달하여 바인딩합니다. 그렇지만 `render` 메소드나 생명주기 메소드는 다른 컴포넌트들로 전달하지 않기 때문에 바인딩할 필요가 없습니다.
+일반적으로 React에서 다른 컴포넌트에 메소드를 **전달**해 줄 때만 바인딩해 주면 됩니다. 예를 들어 `<button onClick={this.handleClick}>`는 `this.handleClick`을 전달하여 바인딩합니다. 그렇지만 `render` 메소드나 생명주기 메소드는 다른 컴포넌트들로 전달하지 않기 때문에 바인딩할 필요가 없습니다.
 
 [Yehuda Katz의 글](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/)에서 바인딩이 무엇인지, Javascript에서 어떻게 함수가 작동하는지에 대해 상세히 알 수 있습니다.
 
@@ -290,7 +290,7 @@ class Searchbox extends React.Component {
   }
 
   handleChange(e) {
-    // 리액트는 이벤트를 모으기 때문에, 디바운스 하기 전에 값을 읽습니다.
+    // React는 이벤트를 모으기 때문에, 디바운스 하기 전에 값을 읽습니다.
     // `event.persist()`를 호출한 후 전체 이벤트를 전달하는 방법도 있습니다.
     // 더 상세한 내용은 reactjs.org/docs/events.html#event-pooling에 있습니다.
     this.emitChangeDebounced(e.target.value);
