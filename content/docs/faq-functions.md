@@ -6,7 +6,7 @@ layout: docs
 category: FAQ
 ---
 
-### 컴포넌트로 onClick과 같은 이벤트 핸들러를 전달하는 방법
+### 컴포넌트로 onClick과 같은 이벤트 핸들러를 전달하는 방법  {#how-do-i-pass-an-event-handler-like-onclick-to-a-component}
 
 하위 컴포넌트에 프로퍼티로 이벤트 핸들러와 다른 함수들을 전달합니다.
 
@@ -16,7 +16,7 @@ category: FAQ
 
 핸들러 안에서 상위 컴포넌트에 접근할 필요가 있으면, 컴포넌트 인스턴스에 함수를 바인딩해 주어야 합니다.
 
-### 컴포넌트 인스턴스로 함수를 바인딩하는 방법{#how-do-i-bind-a-function-to-a-component-instance}
+### 컴포넌트 인스턴스로 함수를 바인딩하는 방법 {#how-do-i-bind-a-function-to-a-component-instance}
 
 사용하고 있는 문법과 빌드 스탭(build steps)에 따라  `this.props`, `this.state`와 같은 컴포넌트의 어트리뷰트에 함수들이 확실히 접근할 수 있도록 만드는 방법은 여러 가지가 있습니다.
 
@@ -85,7 +85,7 @@ class Foo extends Component
 >
 > render 메소드 안에서 화살표 함수를 사용하면 컴포넌트가 렌더링할 때마다 새로운 함수를 만들기 때문에 성능에 영향을 줄 수 있습니다.
 
-### render 메소드 안에서 화살표 함수를 사용해도 괜찮을까?{#is-it-ok-to-use-arrow-functions-in-render-methods}
+### render 메소드 안에서 화살표 함수를 사용해도 괜찮을까? {#is-it-ok-to-use-arrow-functions-in-render-methods}
 
 대체로 사용해도 괜찮고, 콜백 함수로 매개변수를 전달해 주는 것이 가장 쉬운 방법입니다.
 
@@ -110,7 +110,7 @@ method();
 
 [Yehuda Katz의 글](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/)에서 바인딩이 무엇인지, Javascript에서 어떻게 함수가 작동하는지에 대해 상세히 알 수 있습니다.
 
-### 컴포넌트가 렌더링할 때마다 함수가 호출되는 이유{#why-is-my-function-being-called-every-time-the-component-renders}
+### 컴포넌트가 렌더링할 때마다 함수가 호출되는 이유 {#why-is-my-function-being-called-every-time-the-component-renders}
 
 컴포넌트로 함수를 전달할 때, 호출하지 않는지 확인합니다.
 
@@ -130,7 +130,7 @@ render() {
 }
 ```
 
-### 이벤트 핸들러나 콜백에 매개변수를 전달하는 방법{#how-do-i-pass-a-parameter-to-an-event-handler-or-callback}
+### 이벤트 핸들러나 콜백에 매개변수를 전달하는 방법 {#how-do-i-pass-a-parameter-to-an-event-handler-or-callback}
 
 이벤드 핸들러에 화살표 함수를 사용하여 감싼 다음에, 매개변수를 넘겨주면 됩니다.
 
@@ -144,7 +144,7 @@ render() {
 <button onClick={this.handleClick.bind(this, id)} />
 ```
 
-#### 예시: 화살표 함수를 이용하여 매개변수 전달하기{#example-passing-params-using-arrow-functions}
+#### 예시: 화살표 함수를 이용하여 매개변수 전달하기 {#example-passing-params-using-arrow-functions}
 
 ```jsx
 const A = 65 // ASCII character code
@@ -178,7 +178,7 @@ class Alphabet extends React.Component {
 }
 ```
 
-#### 예시: data-attributes를 사용해서 매개변수 전달하기{#example-passing-params-using-data-attributes}
+#### 예시: data-attributes를 사용해서 매개변수 전달하기 {#example-passing-params-using-data-attributes}
 
 다른 방법으로, 이벤트 핸들러에 필요한 데이터를 저장하기 위해 DOM API를 사용할 수 있습니다. 이 방법은 아주 많은 요소를 최적화하거나, React.PureComponent equality checks에 의존하는 렌더링 트리를 사용할 때 고려해 볼 만합니다.
 
@@ -218,7 +218,7 @@ class Alphabet extends React.Component {
 }
 ```
 
-### 함수가 너무 빨리 또는 너무 많이 호출되는 것을 막는 방법{#how-can-i-prevent-a-function-from-being-called-too-quickly-or-too-many-times-in-a-row}
+### 함수가 너무 빨리 또는 너무 많이 호출되는 것을 막는 방법 {#how-can-i-prevent-a-function-from-being-called-too-quickly-or-too-many-times-in-a-row}
 
  `onClick` 또는 `onScroll`과 같은 이벤트 핸들러를 사용하고 있을 때, 콜백이 너무 빠르게 호출되지 않도록 콜백이 실행되는 속도를 제어할 수 있습니다. 다음의 함수들을 사용하면 됩니다.
 
